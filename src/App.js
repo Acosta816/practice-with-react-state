@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ReactDOM from 'react';
+import Clock from './state/Clock';
+import Clock2 from './state/Clock2';
+import Counter from './state/Counter';
+import HelloWorld from './state/state-drills/HelloWorld';
+import Bomb from './state/state-drills/Bomb';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+class App extends React.Component {
+  render(){
+    return(
+
+      <div className="App">
+        Hello I am App being rendered by Index.js
+        <Clock2 />
+        <Counter step={5} />
+        <Counter /> {/*passed in without props*/}
+        <HelloWorld />
+        <Bomb />
+      </div>
+    )
+  } //end of render method
+
 }
 
 export default App;
