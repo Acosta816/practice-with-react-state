@@ -6,8 +6,18 @@ import Counter from './state/Counter';
 import HelloWorld from './state/state-drills/HelloWorld';
 import Bomb from './state/state-drills/Bomb';
 import Rgun from './state/state-drills/Rgun';
+import Tabs from './state/state-drills/Tabs';
+import Tabs2 from './state/state-drills/Tabs2';
 
 
+const tabArray = [
+  { name: 'First tab',
+    content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam exercitationem quos consectetur expedita consequatur. Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque.' },
+  { name: 'Second tab',
+    content: 'Laboriosam exercitationem quos consectetur expedita consequatur. Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
+  { name: 'Third tab',
+    content: 'Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam exercitationem quos consectetur expedita consequatur.' },
+];
 
 class App extends React.Component {
   render(){
@@ -21,6 +31,8 @@ class App extends React.Component {
         <HelloWorld />
         <Bomb />
         <Rgun bulletChamber={5} />
+        <Tabs tabsProp={tabArray}/>
+        <Tabs2 tabsProp={tabArray} />
       </div>
     )
   } //end of render method
