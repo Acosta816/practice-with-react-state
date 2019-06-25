@@ -5,6 +5,7 @@ import Clock2 from './state/Clock2';
 import Counter from './state/Counter';
 import HelloWorld from './state/state-drills/HelloWorld';
 import Bomb from './state/state-drills/Bomb';
+import Rgun from './state/state-drills/Rgun';
 
 
 
@@ -19,6 +20,7 @@ class App extends React.Component {
         <Counter /> {/*passed in without props*/}
         <HelloWorld />
         <Bomb />
+        <Rgun bulletChamber={5} />
       </div>
     )
   } //end of render method
